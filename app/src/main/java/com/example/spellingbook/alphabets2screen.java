@@ -13,6 +13,11 @@ package com.example.spellingbook;
 
 public class alphabets2screen extends AppCompatActivity {
     GridView grill;
+
+    /**
+     * Make the eacHWord and wordImage as Globally available by initialising it as PUBLIC STATIC
+     */
+
      public static String[] eachWord={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t",
             "u","v","w","x","y","z"};
     public static int[] wordImage={
@@ -64,6 +69,8 @@ public class alphabets2screen extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"You Clicked "+eachWord[+position],
                         Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(alphabets2screen.this,eachAlphabet.class);
+
+                // Pass the position value to next page....
                 intent.putExtra("position",position+"");
                 startActivity(intent);
             }

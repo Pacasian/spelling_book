@@ -19,9 +19,13 @@ ImageView imgView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_each_alphabet);
+
+        // Calling the Position from previous Page
+
         int Pos= Integer.parseInt(Objects.requireNonNull(getIntent().getExtras()).getString("position"));
         txt=findViewById(R.id.txt_alpha);
         imgView=findViewById(R.id.imageView);
+        //set the image and text from the previous activity 
         String alpha =eachWord[Pos].toUpperCase();
         txt.setText(alpha);
         imgView.setImageResource(wordImage[Pos]);
