@@ -2,12 +2,15 @@ package com.example.spellingbook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -18,6 +21,7 @@ import static com.example.spellingbook.alphabets2screen.wordImage;
 public class eachAlphabet extends AppCompatActivity {
 TextView txt,txtPlay;
 ImageView imgView,imageViewPlay;
+//FloatingActionButton floatingActionButton;
     TextToSpeech t1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,14 @@ ImageView imgView,imageViewPlay;
         //set the image and text from the previous activity 
         final String alpha =eachWord[Pos].toUpperCase();
         txt.setText(alpha);
+        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+       fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
         imgView.setImageResource(wordImage[Pos]);
         t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -50,5 +62,13 @@ ImageView imgView,imageViewPlay;
             }
         });
         txtPlay.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_play_arrow_24, 0, 0, 0);
+    }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Intent i=new Intent(Intent.ACTION_MAIN);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
     }
 }

@@ -30,6 +30,8 @@
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="50dp"
+        android:background="@drawable/round_oval"
+        android:layout_margin="5dp"
         android:layout_height="50dp"
         android:layout_weight="1"
         android:tooltipText="hai"
@@ -38,6 +40,9 @@
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="50dp"
+        android:background="@drawable/round_oval"
+        android:layout_margin="5dp"
+
         android:layout_height="50dp"
         android:layout_weight="1"
         app:srcCompat="@drawable/star" />
@@ -45,6 +50,8 @@
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="50dp"
+        android:background="@drawable/round_oval"
+        android:layout_margin="5dp"
         android:layout_height="50dp"
         android:layout_weight="1"
         app:srcCompat="@drawable/people" />
@@ -52,6 +59,8 @@
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="50dp"
+        android:background="@drawable/round_oval"
+        android:layout_margin="5dp"
         android:layout_height="50dp"
         android:layout_weight="1"
         app:srcCompat="@drawable/share" />
@@ -59,6 +68,8 @@
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="50dp"
+        android:background="@drawable/round_oval"
+        android:layout_margin="5dp"
         android:layout_height="50dp"
         android:layout_weight="1"
         app:srcCompat="@drawable/contact" />

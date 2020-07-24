@@ -1,5 +1,6 @@
 package com.example.spellingbook;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -27,7 +28,7 @@ public class FloatingBar extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(FloatingBar.this);
+                final AlertDialog.Builder builder = new AlertDialog.Builder(FloatingBar.this);
                 LayoutInflater layoutInflaterAndroid = LayoutInflater.from(FloatingBar.this);
                 View view2 = layoutInflaterAndroid.inflate(R.layout.alert_box, null);
                 builder.setView(view2);
@@ -45,7 +46,7 @@ public class FloatingBar extends AppCompatActivity {
                 imageButton1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(FloatingBar.this, "Working 1...", Toast.LENGTH_SHORT).show();
+                        alertDialog.cancel();
                     }
                 });
             }

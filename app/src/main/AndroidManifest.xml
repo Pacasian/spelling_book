@@ -13,18 +13,18 @@
             android:name=".FloatingBar"
             android:label="@string/title_activity_floating_bar"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".numbers">
 
         </activity>
         <activity android:name=".eachAlphabet" />
         <activity android:name=".alphabets2screen" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".secondscreen"></activity>
